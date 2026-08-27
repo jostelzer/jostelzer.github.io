@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Johannes Stelzer</title>
+<meta name="description" content="Immersive AI systems and digital therapeutics at the Champalimaud Centre for the Unknown, Lisbon. Founding member of the AI art collective Lunar Ring.">
+<style>
+  :root {
+    --bg: #faf9f7;
+    --ink: #1c1b1a;
+    --muted: #6e6a64;
+    --line: #e3e0db;
+    --accent: #2f5d50;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131312;
+      --ink: #e8e6e2;
+      --muted: #97928b;
+      --line: #2b2a28;
+      --accent: #7fb5a4;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { font-size: 17px; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Charter, Georgia, 'Times New Roman', serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; padding: 0 24px 6rem; }
+
+  canvas#field {
+    display: block;
+    width: 100%;
+    height: 160px;
+    margin-bottom: 3.5rem;
+  }
+
+  header h1 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1.9rem;
+    letter-spacing: -0.01em;
+  }
+  header .role {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    margin-top: 0.5rem;
+  }
+
+  main { margin-top: 2.8rem; }
+  main p { margin-bottom: 1.35rem; }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.15s;
+  }
+  a:hover { text-decoration-color: var(--accent); }
+
+  h2 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    margin: 3.2rem 0 1.4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+  }
+
+  ul.plain { list-style: none; }
+  ul.plain li { padding: 0.55rem 0; }
+  ul.plain li + li { border-top: 1px solid var(--line); }
+  ul.plain .meta {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.8rem;
+    color: var(--muted);
+    display: block;
+    margin-top: 0.1rem;
+  }
+
+  footer {
+    margin-top: 3.2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
+    color: var(--muted);
+  }
+  footer a { margin-right: 1.4rem; }
+</style>
+</head>
+<body>
+
+<canvas id="field" aria-hidden="true"></canvas>
+
+<div class="wrap">
+  <header>
+    <h1>Johannes Stelzer</h1>
+    <p class="role">Immersive AI · Digital Therapeutics · Generative Art</p>
+  </header>
+
+  <main>
+    <p>I&rsquo;m a physicist who spent a decade doing machine learning on brains, and now builds immersive AI systems. I work where real-time machine perception, generative models, and people in physical space meet — in the clinic and in the exhibition space.</p>
+
+    <h2>Research</h2>
+    <p>I work on <em>Immersive AI Systems</em> at the <a href="https://www.fchampalimaud.org/immersive-ai-systems-group">Champalimaud Centre for the Unknown</a> in Lisbon: therapeutic environments under real-time AI control, where sensing and generative models close the loop with the patient — movement rehabilitation for Parkinson&rsquo;s, exposure therapy for OCD, and more to come. Alongside: agentic coding and AI for science — how agents can verify their own code, and write literature reviews whose citations are real, peer-reviewed, and screened for retractions.</p>
+    <p>Before Lisbon: a PhD in neuroscience and machine learning at the Max Planck Institute for Human Cognitive and Brain Sciences in Leipzig, postdoctoral research on ultra-high-field fMRI at the Max Planck Institute for Biological Cybernetics in Tübingen and at the Danish Research Centre for Magnetic Resonance in Copenhagen, and four years as co-founder &amp; CEO of an applied-AI company in Cyber Valley.</p>
+    <ul class="plain">
+      <li><a href="https://doi.org/10.1038/s41467-018-06304-z">LISA improves statistical analysis for fMRI</a><span class="meta">Nature Communications, 2018</span></li>
+      <li><a href="https://doi.org/10.1093/cercor/bhv137">Brain network reconfiguration and perceptual decoupling during an absorptive state of consciousness</a><span class="meta">Cerebral Cortex, 2016</span></li>
+      <li><a href="https://doi.org/10.1093/brain/awv135">Why musical memory can be preserved in advanced Alzheimer&rsquo;s disease</a><span class="meta">Brain, 2015</span></li>
+      <li><a href="https://doi.org/10.3389/fnhum.2014.00462">Deficient approaches to human neuroimaging</a><span class="meta">Frontiers in Human Neuroscience, 2014</span></li>
+      <li><a href="https://doi.org/10.1016/j.neuroimage.2012.09.063">Statistical inference and multiple testing correction in classification-based MVPA</a><span class="meta">NeuroImage, 2013</span></li>
+    </ul>
+
+    <h2>Art</h2>
+    <p>Founding member of <a href="https://www.lunar-ring.ai">Lunar Ring</a>, an AI art collective exploring generative models as a new kind of instrument — played live, in real time, in museums, festivals, and public spaces; featured in the <a href="https://www.nvidia.com/en-us/research/ai-art-gallery/artists/lunar-ring">NVIDIA AI Art Gallery</a>. There is also a <a href="https://www.ted.com/talks/johannes_stelzer_how_ai_shapes_a_new_form_of_creativity">TEDx talk</a> from the early days.</p>
+    <ul class="plain">
+      <li><a href="https://lunar-ring.ai/submersion/">Submersion</a><span class="meta">Real-time diffusion mirror — words in, worlds out</span></li>
+      <li><a href="https://lunar-ring.ai/atavic-forest/">Atavic Forest</a><span class="meta">A sound-reactive forest dreamt from ancestral memory</span></li>
+      <li><a href="https://lunar-ring.ai/altered_reflections/">Altered Reflections</a><span class="meta">A mirror that slowly forgets your face — and quietly gives it back</span></li>
+      <li><a href="https://lunar-ring.ai/latent-blending/">Latent Blending</a><span class="meta">Smooth transitions in latent space — also <a href="https://github.com/lunarring/latentblending">open source</a></span></li>
+    </ul>
+
+    <h2>Code</h2>
+    <p>Open source: real-time diffusion, tools for interactive exhibitions, and agent skills for science and software verification — on <a href="https://github.com/jostelzer">GitHub</a> and at <a href="https://github.com/lunarring">lunarring</a>.</p>
+  </main>
+
+  <footer>
+    <a href="https://github.com/jostelzer">GitHub</a>
+    <a href="https://www.linkedin.com/in/johannesstelzer/">LinkedIn</a>
+    <a href="https://x.com/j_stelzer">X</a>
+    <a href="https://www.lunar-ring.ai">Lunar Ring</a>
+  </footer>
+</div>
+
+<script>
+// Slow latent drift — color fields blending into each other, barely moving.
+const cv = document.getElementById('field');
+const ctx = cv.getContext('2d');
+const dark = matchMedia('(prefers-color-scheme: dark)');
+
+function palette() {
+  return dark.matches
+    ? [[38, 66, 58], [30, 38, 54], [58, 42, 30], [19, 19, 18]]
+    : [[199, 222, 212], [206, 214, 228], [232, 219, 202], [250, 249, 247]];
+}
+
+function resize() {
+  cv.width = cv.clientWidth * devicePixelRatio;
+  cv.height = cv.clientHeight * devicePixelRatio;
+}
+addEventListener('resize', resize);
+resize();
+
+let t = Math.random() * 1000;
+function draw() {
+  const w = cv.width, h = cv.height, p = palette();
+  ctx.clearRect(0, 0, w, h);
+  t += 0.0009;
+  for (let i = 0; i < 3; i++) {
+    const cx = w * (0.5 + 0.42 * Math.sin(t * (0.6 + i * 0.23) + i * 2.1));
+    const cy = h * (0.5 + 0.35 * Math.cos(t * (0.5 + i * 0.31) + i * 1.4));
+    const r = Math.max(w, h) * (0.35 + 0.12 * Math.sin(t * 0.8 + i));
+    const g = ctx.createRadialGradient(cx, cy, 0, cx, cy, r);
+    const c = p[i];
+    g.addColorStop(0, `rgba(${c[0]},${c[1]},${c[2]},0.55)`);
+    g.addColorStop(1, `rgba(${c[0]},${c[1]},${c[2]},0)`);
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, w, h);
+  }
+  const bg = p[3];
+  const fade = ctx.createLinearGradient(0, 0, 0, h);
+  fade.addColorStop(0.55, `rgba(${bg[0]},${bg[1]},${bg[2]},0)`);
+  fade.addColorStop(1, `rgba(${bg[0]},${bg[1]},${bg[2]},1)`);
+  ctx.fillStyle = fade;
+  ctx.fillRect(0, 0, w, h);
+  requestAnimationFrame(draw);
+}
+draw();
+</script>
+
+</body>
+</html>
